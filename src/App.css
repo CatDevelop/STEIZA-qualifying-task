@@ -1,6 +1,33 @@
 @font-face {
+    font-family: "Cardillac";
+    src: url('./assets/font/Cardillac-Light.ttf');
+    font-weight: 300;
+}
+@font-face {
+    font-family: "Cardillac";
+    src: url('./assets/font/Cardillac-Regular.ttf');
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Cardillac";
+    src: url('./assets/font/Cardillac-Medium.ttf');
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Cardillac";
+    src: url('./assets/font/Cardillac-Bold.ttf');
+    font-weight: 700;
+}
+
+
+@font-face {
+    font-family: "PT Sans";
+    src: url('./assets/font/PTSans-Regular.ttf');
+    font-weight: 400;
+}
+@font-face {
     font-family: Cardillac;
-    src: url(./assets/font/PTSans-Bold.ttf);
+    src: url('./assets/font/PTSans-Bold.ttf');
     font-weight: 700;
 }
 
