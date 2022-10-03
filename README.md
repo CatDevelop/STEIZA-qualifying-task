@@ -1,4 +1,4 @@
-# Тестового задание на позицию front-end разработчика в IT-компанию STEIZA
+# Тестовое задание на позицию front-end разработчика в IT-компанию STEIZA
 Проект выполнен в рамках стажировки на позицию front-end разработчика.
 
 1. В качестве основы был взят [Figma mockup сайта](https://d-e-n.info/blog/templates/2020-09-01-muzhskoj-magazin.html)
