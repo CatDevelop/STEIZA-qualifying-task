@@ -1,0 +1,539 @@
+@font-face {
+    font-family: Cardillac;
+    src: url(./assets/font/PTSans-Bold.ttf);
+    font-weight: 700;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 75px;
+}
+
+body {
+    font-weight: 400;
+    overflow-x: hidden;
+    position: relative;
+    background-color: #000 !important;
+    color: #fff !important;
+    font-family: Centra, sans-serif !important;
+}
+
+.container {
+    max-width: 1110px !important;
+}
+
+.not_found {
+    font-family: Cardillac;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    letter-spacing: .05em;
+    font-size: 20px;
+    height: 775px;
+}
+
+.not_found p {
+    margin-bottom: 0 !important;
+    margin-right: 3px;
+    font-size: 20px;
+}
+
+.footer img {
+    width: 26%;
+}
+
+.footer p {
+    font-weight: 400;
+    font-size: 12px;
+    font-family: 'PT Sans';
+    color: #D0D0D0;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.BorderedFrame {
+    background-color: rgba(28, 28, 28, 0.5);
+    max-width: 778px;
+    text-align: center;
+    font-family: "PT Sans";
+    font-size: 15px;
+    line-height: 26px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: auto;
+    padding: 20px 10px 10px;
+}
+
+.BorderedFrame p {
+    margin-bottom: 0;
+}
+
+.but {
+    color: #FFF;
+    font-family: "PT Sans", serif;
+    display: flex;
+    justify-content: center;
+    transition: .5s;
+    box-shadow: none;
+    margin: 70px auto auto;
+}
+
+.but h3 {
+    border: solid 1px;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+.but h3:hover, .but h3:focus {
+    box-shadow: inset 15em 0 0 0 #FFF;
+    color: #1F1F1F;
+    border: solid 1px #FFF;
+    transition: .5s;
+}
+
+.fa-sign-out, .fa-phone {
+    padding-top: 3px;
+    margin-right: 5px;
+    color: #969696;
+}
+
+.topline-container {
+    padding: 10px;
+}
+
+.topline {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sign a, .topline p {
+    color: #969696;
+    font-family: 'PT Sans', serif;
+    font-size: 14px;
+    margin: auto 5px 0 !important;
+}
+
+.sign a, .topline-num a {
+    color: #969696 !important;
+}
+
+nav.navbar {
+    background-color: #0F0F0F;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 9999;
+    transition: 0.32 ease-in-out;
+    padding: 0;
+}
+
+nav.navbar.scrolled {
+    background-color: rgba(32, 32, 35, 0.76);
+    padding: 0;
+}
+
+nav.navbar a.navbar-brand {
+    width: 9%;
+}
+
+nav.navbar .navbar-nav .nav-link.navbar-link {
+    font-family: "PT Sans";
+    font-weight: 400;
+    color: #969696;
+    letter-spacing: .8px;
+    font-size: 14px;
+    opacity: 1;
+    padding: 25px 40px;
+}
+
+nav.navbar .navbar-nav a.nav-link.navbar-link:hover, nav.navbar .navbar-nav a.nav-link.navbar-link.active {
+    opacity: 1;
+    background-color: #1F1F1F;
+    color: #FFF;
+}
+
+.social-icon {
+    display: inline-block;
+    margin-left: 14px;
+}
+
+.social-icon a {
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
+    margin-right: 6px;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.social-icon a::before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    border-radius: 50%;
+    transition: .3s ease-in-out;
+}
+
+.social-icon a:hover::before {
+    transform: scale(1);
+}
+
+.social-icon a img {
+    width: 40%;
+    z-index: 1;
+    transition: .3s ease-in-out;
+}
+
+.social-icon a:hover img {
+    filter: brightness(50%) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
+}
+
+nav.navbar .navbar-toggler:active, nav.navbar .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+nav.navbar .navbar-toggler-icon {
+    width: 24px;
+    height: 17px;
+    background-image: none;
+    position: relative;
+    border-bottom: 2px solid #fff;
+    transition: all 300ms linear;
+    top: -2px;
+}
+
+nav.navbar .navbar-toggler-icon:focus {
+    border-bottom: 2px solid #fff;
+}
+
+nav.navbar .navbar-toggler-icon:after, nav.navbar .navbar-toggler-icon:before {
+    width: 24px;
+    position: absolute;
+    height: 2px;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    content: '';
+    z-index: 2;
+    transition: all 300ms linear;
+}
+
+nav.navbar .navbar-toggler-icon:after {
+    top: 8px;
+}
+
+nav.navbar .navbar-toggler[aria-expanded=true] .navbar-toggler-icon:after {
+    transform: rotate(45deg);
+    background-color: #fff;
+    height: 2px;
+}
+
+nav.navbar .navbar-toggler[aria-expanded=true] .navbar-toggler-icon:before {
+    transform: translateY(8px) rotate(-45deg);
+    background-color: #fff;
+    height: 2px;
+}
+
+nav.navbar .navbar-toggler[aria-expanded=true] .navbar-toggler-icon {
+    border-color: transparent;
+}
+
+.first-screen {
+    padding-bottom: 20px;
+    background-image: url(./assets/img/first-screen-background.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #464646;
+}
+
+.first-screen-logo {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.first-screen-logo img {
+    max-width: 320px;
+    max-height: 320px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 160px auto 70px;
+}
+
+.two {
+    margin-top: 20px !important;
+    margin-bottom: 40px !important;
+}
+
+.ns-items {
+    display: flex;
+    justify-content: center;
+    font-family: Cardillac, serif;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 60px;
+    flex-wrap: wrap !important;
+    gap: 20px;
+}
+
+.ns-item-name {
+    margin-top: 25px !important;
+    margin-bottom: 0 !important;
+}
+
+.ns-item-cost {
+    margin-top: 5px !important;
+    line-height: 24px;
+    letter-spacing: .05em;
+    font-weight: 400;
+    font-size: 16px;
+    color: #D0D0D0;
+}
+
+.item img {
+    display: block;
+    max-width: 260px;
+    max-height: 325px;
+    height: auto;
+    margin: auto;
+}
+
+.other-collection-second p {
+    font-size: 14px;
+}
+
+.oc-border {
+    margin-top: 50px;
+}
+
+.logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.brands {
+    background-color: #0F0F0F;
+    padding-bottom: 60px;
+}
+
+.brands h1 {
+    font-family: Cardillac, serif;
+    font-weight: 500;
+    font-size: 36px;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 55px;
+    font-style: normal;
+    margin-bottom: 33px;
+    padding-top: 50px;
+}
+
+.brands hr {
+    align-items: center;
+    background-color: #FFF;
+    opacity: 1;
+    margin: auto auto 40px;
+}
+
+.above-footer {
+    background-image: url(./assets/img/above-footer-background.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #464646;
+}
+
+.af-back {
+    max-width: 1920px;
+    max-height: 400px;
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    margin: auto;
+}
+
+.af-blocks {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 80px;
+}
+
+.af-blocks h1 {
+    font-family: Cardillac, serif;
+    font-weight: 500;
+    font-size: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 55px;
+    font-style: normal;
+    margin-top: 50px;
+}
+
+.about-us {
+    max-width: 350px;
+    text-align: left;
+    font-family: "PT Sans", serif;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 400;
+    margin: auto;
+    padding: 20px 10px 60px;
+}
+
+.af-categories {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 320px;
+    margin-top: 35px;
+}
+
+.af-categories p {
+    background-color: #0F0F0F;
+    color: #D0D0D0;
+    padding: 10px 20px;
+}
+
+.mail-form {
+    max-width: 400px;
+}
+
+.mailing {
+    padding-bottom: 40px !important;
+}
+
+.form-control {
+    background: rgba(255, 255, 255, 0.4) !important;
+    box-sizing: border-box;
+    border: none !important;
+    margin-left: 10px !important;
+    max-width: 210px;
+    border-radius: 0 !important;
+    font-family: "PT Sans", serif;
+    font-size: 14px;
+}
+
+.form-control:focus {
+    box-shadow: none !important;
+    font-family: "PT Sans", serif;
+    font-weight: 400;
+}
+
+.form-control::placeholder {
+    color: #969696 !important;
+    font-size: 14px !important;
+    font-family: "PT Sans", serif;
+}
+
+.mail-input .but {
+    color: #FFF;
+    font-family: "PT Sans", serif;
+    display: flex;
+    justify-content: center;
+    transition: .5s;
+    box-shadow: none;
+    background-color: #0F0F0F;
+    margin: 0 10px 10px 3px !important;
+}
+
+.mail-input .but h3 {
+    border: solid 0 #0F0F0F;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 0 !important;
+    padding: 10px 17px 9px;
+}
+
+.mail-input .but h3:hover, .mail-input .but h3:focus {
+    box-shadow: inset 15em 0 0 0 #FFF;
+    color: #1F1F1F;
+    transition: .5s;
+}
+
+.sign, .number, .mail-input {
+    display: flex;
+}
+
+.new-season, .other-collection {
+    max-width: 1920px;
+    max-height: 730px;
+    display: flex;
+    flex-wrap: revert;
+}
+
+.new-season-first, .other-collection-first {
+    float: left;
+    width: 50%;
+}
+
+.new-season-second, .other-collection-second {
+    float: right;
+    width: 50%;
+}
+
+.new-season-items h1, .other-collection-second h1 {
+    font-family: Cardillac, serif;
+    font-weight: 500;
+    font-size: 36px;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 55px;
+    font-style: normal;
+    margin-top: 110px;
+}
+
+.new-season-items hr, .other-collection-second hr {
+    align-items: center;
+    background-color: #FFF;
+    opacity: 1;
+    margin: auto;
+}
+
+@media max-width 700px {
+
+    .ns-items {
+        margin: 60px auto auto 200px !important;
+    }
+
+    .other-collection-second h1, .new-season-items h1, .other-collection-second hr, .new-season-items hr {
+        margin-left: 150px !important;
+    }
+
+    .not_found {
+        height: 500px;
+    }
+
+    .new-admissions-items {
+        margin-top: 900px;
+    }
+
+    .new-admissions-items hr {
+        margin-left: 170px !important;
+    }
+
+    .two, .new-admissions-items h1, .new-admissions-it {
+        margin-left: 0 !important;
+    }
+
+    .topline-container, .os-image-back, .ns-image-back, .other-collection-second {
+        display: none;
+    }
+}
