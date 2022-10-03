@@ -13,13 +13,12 @@ function App() {
         <div className="App">
             <TopLine/>
             <NavBar/>
-
-
-
+            
             <Routes>
                 <Route path="/" element={<Homepage/>} />
                 <Route path={"*"} element={<Notfoundpage/>} />
             </Routes>
+            
             <Footer/>
         </div>
     );
