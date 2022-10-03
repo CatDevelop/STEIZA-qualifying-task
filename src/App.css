@@ -343,7 +343,15 @@ nav.navbar .navbar-toggler[aria-expanded=true] .navbar-toggler-icon {
 }
 
 .oc-border {
-    margin-top: 50px;
+    max-width: 470px;
+    margin: 50px auto;
+    background: none !important;
+}
+
+.oc-border .BorderedFrame {
+    background: none !important;
+    font-size: 14px !important;
+    text-transform: none !important;
 }
 
 .logos {
