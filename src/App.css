@@ -542,33 +542,41 @@ nav.navbar .navbar-toggler[aria-expanded=true] .navbar-toggler-icon {
     margin: auto;
 }
 
-@media max-width 700px {
-
-    .ns-items {
-        margin: 60px auto auto 200px !important;
+@media (max-width: 700px) {
+    .topline-container {
+        display: none;
+    }
+    .os-image-back,
+    .ns-image-back,
+    .other-collection-second{
+        display: none;
     }
 
-    .other-collection-second h1, .new-season-items h1, .other-collection-second hr, .new-season-items hr {
+    .ns-items{
+        margin: auto;
+        margin-left: 200px !important;
+        margin-top: 60px !important;
+    }
+
+    .other-collection-second h1,
+    .new-season-items h1,
+    .other-collection-second hr,
+    .new-season-items hr{
         margin-left: 150px !important;
     }
 
     .not_found {
         height: 500px;
     }
-
     .new-admissions-items {
         margin-top: 900px;
     }
-
     .new-admissions-items hr {
         margin-left: 170px !important;
     }
-
-    .two, .new-admissions-items h1, .new-admissions-it {
-        margin-left: 0 !important;
-    }
-
-    .topline-container, .os-image-back, .ns-image-back, .other-collection-second {
-        display: none;
+    .two,
+    .new-admissions-items h1,
+    .new-admissions-it {
+        margin-left: 0px !important;
     }
 }
